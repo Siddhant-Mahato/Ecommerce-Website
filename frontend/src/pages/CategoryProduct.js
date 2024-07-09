@@ -62,32 +62,33 @@ const CategoryProduct = () => {
 
   useEffect(() => {
     fetchData();
-  }, [filterCategoryList, fetchData, navigate]);
+  }, [filterCategoryList]);
 
   useEffect(() => {
-    const arrayOfCategory = Object.keys(selectCategory)
-      .map((categoryKeyName) => {
-        if (selectCategory[categoryKeyName]) {
-          return categoryKeyName;
-        }
-        return null;
-      })
-      .filter((el) => el);
+    const arrayOfCategory = Object.keys(selectCategory).map(categoryKeyName => {
+      if (selectCategory[categoryKeyName])
+      {
+        return categoryKeyName
+      }
+      return null;
+
+    }).filter(el => el)
 
     setFilterCategoryList(arrayOfCategory);
 
     //format for url change when change on the checkbox
-    const urlFormat = arrayOfCategory.map((el, index) => {
-      if (arrayOfCategory.length - 1 === index) {
-        return `category=${el}`;
-      }
-      return `category=${el}&&`;
-    });
+      const urlFormat = arrayOfCategory.map((el,index) => {
+        if((arrayOfCategory.length - 1 ) === index  ){
+          return `category=${el}`
+        }
+        return `category=${el}&&`
+      })
 
-    navigate("/product-category?" + urlFormat.join(""));
+      navigate("/product-category?"+urlFormat.join("")) 
 
     // console.log("selectCategory", arrayOfCategory);
-  }, [selectCategory, navigate]);
+
+  }, [selectCategory])
 
   const handleOnChangeSortBy = (e) => {
     const { value } = e.target;

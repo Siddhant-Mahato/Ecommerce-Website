@@ -44,6 +44,7 @@ const VerticalCard = ({ loading, data = [] }) => {
                   <img
                     src={product?.productImage[0]}
                     className="object-scale-down h-full hover:scale-110 transition-all mix-blend-multiply"
+                    alt="Product image"
                   />
                 </div>
                 <div className="p-4 grid gap-3">

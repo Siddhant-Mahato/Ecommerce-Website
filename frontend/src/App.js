@@ -120,7 +120,7 @@ function App() {
   useEffect(() => {
     fetchUserDetails();
     fetchUserAddToCart();
-  }, [fetchUserDetails, fetchUserAddToCart]);
+  }, []);
 
   return (
     <>

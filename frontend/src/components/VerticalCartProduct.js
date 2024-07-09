@@ -30,7 +30,7 @@ const VerticalCartProduct = ({ category, heading }) => {
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   const scrollRight = () => {
     scrollElement.current.scrollLeft += 300;
@@ -88,7 +88,7 @@ const VerticalCartProduct = ({ category, heading }) => {
                     <img
                       src={product?.productImage[0]}
                       className="object-scale-down h-full hover:scale-110 transition-all mix-blend-multiply"
-                      alt={product?.productName}
+                      alt=""
                     />
                   </div>
 

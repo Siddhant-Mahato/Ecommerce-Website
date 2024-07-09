@@ -45,6 +45,7 @@ const OrderPage = () => {
                           <img
                             src={product.image[0]}
                             className="w-28 h-28 bg-slate-200 object-scale-down p-2 mix-blend-multiply"
+                            alt=""
                           />
                           <div>
                             <div className="font-medium text-lg text-ellipsis line-clamp-1">

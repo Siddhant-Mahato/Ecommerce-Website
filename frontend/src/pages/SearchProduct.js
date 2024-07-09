@@ -26,8 +26,8 @@ const SearchProduct = () => {
     }
 
     useEffect(() => {
-      fetchProduct();
-    }, [query, fetchProduct]);
+        fetchProduct();
+    }, [query])
 
   return (
     <div className='container mx-auto p-4'>  

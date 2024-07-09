@@ -65,7 +65,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     fetchProductDetails();
-  }, [params, fetchProductDetails]);
+  }, [params]);
   
 
   const handleMouseEnterProduct = (imageURL) => {
@@ -86,7 +86,7 @@ const ProductDetail = () => {
         y,
       });
     },
-    // [zoomImageCoordinate]
+    [zoomImageCoordinate]
   );
 
   
@@ -116,7 +116,7 @@ const ProductDetail = () => {
               className="h-full w-full object-scale-down mix-blend-multiply "
               onMouseMove={handleZoomImage}
               onMouseLeave={handleLeaveImageZoom}
-              alt='zoom'
+              alt=''
             />
 
             {/* Product Zoom */}
@@ -162,7 +162,7 @@ const ProductDetail = () => {
                         className="w-full h-full object-scale-down mix-blend-multiply cursor-pointer"
                         onMouseEnter={() => handleMouseEnterProduct(imageURL)}
                         onClick={() => handleMouseEnterProduct(imageURL)}
-                        alt='imageURL'
+                        alt=''
                       />
                     </div>
                   );
