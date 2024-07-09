@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import fetchCategoryWiseProduct from "../helpers/fetchCategoryWiseProduct";
 import displayINRCurrency from "../helpers/displayCurrency";
-import { FaAngleRight } from "react-icons/fa";
-import { FaAngleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import addToCart from "../helpers/addToCart";
 import UserContext from "../context";
@@ -15,11 +13,6 @@ const CategroyWiseProductDisplay = ({ category, heading }) => {
   
   const { fetchUserAddToCart } = useContext(UserContext);
   
-  
-  
-  const [scroll, setScroll] = useState(0);
-  
-  const scrollElement = useRef();
   
 
   const handleAddToCart = async(e, id) => {
@@ -36,7 +29,7 @@ const CategroyWiseProductDisplay = ({ category, heading }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
  
 
@@ -79,6 +72,7 @@ const CategroyWiseProductDisplay = ({ category, heading }) => {
                     <img
                       src={product?.productImage[0]}
                       className="object-scale-down h-full hover:scale-110 transition-all mix-blend-multiply"
+                      alt={product?.productName}
                     />
                   </div>
 

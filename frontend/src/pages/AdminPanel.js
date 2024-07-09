@@ -17,7 +17,7 @@ const AdminPanel = () => {
         {
             navigate("/")
         }
-    },[user])
+    },[user,navigate]);
 
   return (
     <div className="min-h-[calc(100vh-120px)] lg:flex hidden">

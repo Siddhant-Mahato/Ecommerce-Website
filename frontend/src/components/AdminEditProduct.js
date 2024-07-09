@@ -79,9 +79,8 @@ const AdminEditProduct = ({ onClose,productData,fetchdata }) => {
     }
   };
 
-  {
-    /** Upload Product */
-  }
+
+  // Upload Product
 
   const handleSubmit = async (e) => {
     e.preventDefault();

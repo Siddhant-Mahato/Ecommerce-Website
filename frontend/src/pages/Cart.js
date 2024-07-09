@@ -47,8 +47,8 @@ const Cart = () => {
   useEffect(() => {
     setLoading(true);
     handleLoading();
-    setLoading(false);
-  }, []);
+    handleLoading(false);
+  }, [setLoading, handleLoading]);
 
 
   
@@ -182,6 +182,7 @@ const Cart = () => {
                       <img
                         src={product?.productId?.productImage[0]}
                         className="w-full h-full object-scale-down mix-blend-multiply"
+                        alt='productImage'
                       />
                     </div>
                     <div className="px-4 py-2 relative">

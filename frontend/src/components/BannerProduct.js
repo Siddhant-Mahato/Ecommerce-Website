@@ -45,7 +45,7 @@ const BannerProduct = () => {
 
     const prevImage = () => {
 
-        if (currentImage != 0)
+        if (currentImage !== 0)
         {
             setCurrentImage((prev) => prev - 1);
         }
@@ -53,15 +53,18 @@ const BannerProduct = () => {
 
     useEffect(() => {
       const interval = setInterval(() => {
-        if (desktopImages.length - 1 > currentImage) {
-          nextImage();
-        } else {
-          setCurrentImage(0);
-        }
+        setCurrentImage((prev) => {
+          if (prev < desktopImages.length - 1) {
+            return prev + 1;
+          } else {
+            return 0; // Reset to the first image after reaching the last one
+          }
+        });
       }, 5000);
 
       return () => clearInterval(interval);
-    }, [currentImage]);
+    }, [currentImage, desktopImages.length]);
+
 
   return (
     <div className="w-full  mx-auto p-3.5 rounded  ">
@@ -92,8 +95,9 @@ const BannerProduct = () => {
                 className="w-full h-full min-h-full min-w-full transition-all"
                 key={imageURL}
                 style={{ transform: `translateX(-${currentImage * 100}%)` }}
+            
               >
-                <img src={imageURL} className="w-full h-full" />
+                <img src={imageURL} className="w-full h-full" alt="image"/>
               </div>
             );
           })}

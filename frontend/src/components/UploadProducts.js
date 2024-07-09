@@ -92,7 +92,7 @@ const UploadProducts = ({ onClose,fetchData }) => {
   }
 
 
-  {/** Upload Product */ }
+  // Upload Product 
   
   const handleSubmit = async(e) => {
     e.preventDefault();

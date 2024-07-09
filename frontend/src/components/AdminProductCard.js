@@ -17,6 +17,7 @@ const AdminProductCard = ({ data,fetchdata }) => {
             width={120}
             height={120}
             className=" mx-auto object-fill h-full"
+            alt={data?.productName}
           ></img>
         </div>
 

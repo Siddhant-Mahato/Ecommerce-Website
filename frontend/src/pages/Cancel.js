@@ -10,6 +10,7 @@ const Cancel = () => {
         width={150}
         height={150}
         className="mix-blend-multiply"
+        alt="cancel"
       />
       <p className="text-red-600 font-bold text-xl">Payment Cancel</p>
       <Link
