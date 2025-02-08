@@ -106,7 +106,7 @@ Contributions are welcome! Please follow these steps:
 
 ## 📄 License
 
-Copyright @2024 Siddhant
+Copyright @2024 Siddhant Mahato
 
 ## 📞 Contact
 
